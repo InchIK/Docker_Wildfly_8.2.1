@@ -13,7 +13,6 @@ CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0
 
 
 **Start Docker WildflyAdmin**  
-
 docker build --tag=kungyc/wildfly_admin .  
 docker run -p 8080:8080 -p 9990:9990 -it kungyc/wildfly_admin /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0  
 
