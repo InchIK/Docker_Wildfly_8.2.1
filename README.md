@@ -5,7 +5,6 @@ docker run -p 8080:8080 -p 9990:9990 -it kungyc/wildfly /opt/jboss/wildfly/bin/s
 ----------
 
 **wildfly Admin Management**  
-
 Dockerfile  
 
 FROM kungyc/wildfly_8.2.1  
