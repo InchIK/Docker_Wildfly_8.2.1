@@ -3,6 +3,9 @@ FROM kungyc/openjdk_1.8
 # Set the WILDFLY_VERSION env variable
 ENV WILDFLY_VERSION 8.2.1.Final
 ENV JBOSS_HOME /opt/jboss/wildfly
+ENV LANG en_US.UTF-8 
+ENV LANGUAGE en_US:en 
+ENV LC_ALL en_US.UTF-8
 
 USER root
 
