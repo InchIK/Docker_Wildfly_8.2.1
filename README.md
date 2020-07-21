@@ -1,3 +1,5 @@
+此檔案供Golden-emi使用
+
 **Start Docker Wildfly**  
 
 docker run -p 8080:8080 -it kungyc/wildfly /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0  
