@@ -1,0 +1,9 @@
+version: '3'
+services:
+   wildfly:
+      image: kungyc/wildfly_8.2.1
+      ports:
+         - "8085:8080"
+      volumes:
+         - /opt/Docker_Volume/wildfly/winFolders0401:/automnt/winFolders0401
+         - /opt/Docker_Volume/wildfly/deployments/golden_system.war:/opt/jboss/wildfly/standalone/deployments/golden_system.war
