@@ -3,6 +3,7 @@ services:
    wildfly:
       image: kungyc/wildfly_8.2.1
       container_name: eGolden_system
+      restart: always
       ports:
          - "8085:8080"
       volumes:
