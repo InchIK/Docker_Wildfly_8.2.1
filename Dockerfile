@@ -3,6 +3,7 @@ FROM kungyc/openjdk_1.8
 # Set the WILDFLY_VERSION env variable
 ENV WILDFLY_VERSION 8.2.1.Final
 ENV JBOSS_HOME /opt/jboss/wildfly
+ENV LOGS_HOME /opt/logs
 ENV LANG en_US.UTF-8 
 ENV LANGUAGE en_US:en 
 ENV LC_ALL en_US.UTF-8
@@ -20,7 +21,9 @@ RUN cd $HOME \
     && mv $HOME/wildfly-$WILDFLY_VERSION $JBOSS_HOME \
     && rm wildfly-$WILDFLY_VERSION.tar.gz \
     && chown -R jboss:0 ${JBOSS_HOME} \
-    && chmod -R g+rw ${JBOSS_HOME} 
+    && chmod -R g+rw ${JBOSS_HOME} \
+    && chown -R jboss:0 ${LOGS_HOME} \
+    && chown -R jboss:0 ${LOGS_HOME}
 
 # Ensure signals are forwarded to the JVM process correctly for graceful shutdown
 ENV LAUNCH_JBOSS_IN_BACKGROUND true
