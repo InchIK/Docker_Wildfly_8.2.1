@@ -22,7 +22,7 @@ RUN cd $HOME \
     && rm wildfly-$WILDFLY_VERSION.tar.gz \
     && chown -R jboss:0 ${JBOSS_HOME} \
     && chmod -R g+rw ${JBOSS_HOME} \
-    && mkdir /opt/logs \
+    && mkdir ${LOGS_HOME} \
     && chown -R jboss:0 ${LOGS_HOME} \
     && chmod -R g+rw ${LOGS_HOME}
 
